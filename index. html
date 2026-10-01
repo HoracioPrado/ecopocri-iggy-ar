@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ECOPOCRÍ AR - Iggy</title>
+  <title>Iggy - ECOPOCRÍ</title>
 
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -14,31 +14,13 @@
       margin: 0;
       overflow: hidden;
     }
-
-    #mensaje {
-      position: fixed;
-      top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      background: rgba(0,0,0,0.75);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 20px;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
   </style>
 </head>
 
 <body>
 
-  <div id="mensaje">
-    🦎 Apunta la cámara hacia la tarjeta de Iggy
-  </div>
-
   <a-scene
-    mindar-image="imageTargetSrc: ./Iggy.mind; autoStart: true; uiScanning: yes; uiLoading: yes; uiError: yes;"
+    mindar-image="imageTargetSrc: ./targets.mind;"
     embedded
     color-space="sRGB"
     renderer="colorManagement: true, physicallyCorrectLights"
@@ -62,13 +44,15 @@
       <a-gltf-model
         src="#iggy"
         position="0 0 0"
-        rotation="0 0 0"
-        scale="0.5 0.5 0.5">
+        scale="0.1 0.1 0.1">
       </a-gltf-model>
 
     </a-entity>
 
   </a-scene>
+
+</body>
+</html>
 
 </body>
 </html>
